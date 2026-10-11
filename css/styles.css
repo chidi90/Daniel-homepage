@@ -83,6 +83,11 @@ nav a:hover{
     transform: scale(1.05);
 }
 
+.button a{
+    color:white;
+    text-decoration: none;
+}
+
 .code-card-header{
     display: flex;
     justify-content: space-between;
