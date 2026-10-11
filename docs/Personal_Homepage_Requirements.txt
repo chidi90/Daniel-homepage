@@ -1,0 +1,205 @@
+SOFTWARE REQUIREMENTS SPECIFICATION Personal Homepage — Version 1.0
+(Draft)
+
+Project: Personal Homepage (vanilla HTML and CSS) Author: Daniel
+Chidiebere Date: 9 October 2026 Phase: 2 - Requirements Analysis
+(software development life cycle) Status: Draft, awaiting author review
+Repository: To be added once the GitHub repository is created
+
+1.  INTRODUCTION
+
+Purpose This document states exactly what the finished homepage must
+contain and how well it must behave. Every requirement has an ID and an
+acceptance criterion, so it can be tested in Phase 5 and traced to a
+GitHub Issue, a branch, a commit, and a pull request.
+
+Scope — In - Header with navigation - Hero (text, button, code card) -
+About section with goal card - Three learning cards with progress bars -
+Contact strip - Footer
+
+Scope — Out (Version 1) - No JavaScript - No additional pages - No
+backend - No contact form (the email button is a plain mailto link) - No
+CSS frameworks or libraries
+
+Priority key Must = required for release. Should = important, but can be
+cut if time runs short.
+
+Content values used throughout this document - Site name: Daniel
+Chidiebere - Copyright year: 2026 - Contact email:
+danielchidiebere383@gmail.com
+
+2.  FUNCTIONAL REQUIREMENTS
+
+What the page must contain or do, listed from the top of the page to the
+bottom.
+
+2.1 Header and Navigation
+
+FR-01 — Header and navigation layout (Must) Statement: The page must
+have a header with the site name on the left and four navigation links
+on the right. Acceptance criteria: - Name “Daniel Chidiebere” is visible
+at top-left. - Links Home, About, Learning, Contact appear top-right on
+one line. - Home is visually marked as active (green text with an
+underline).
+
+FR-02 — Navigation behavior (Must) Statement: Each navigation link must
+take the visitor to its matching section. Acceptance criteria: -
+Clicking About, Learning, or Contact scrolls to that section. - Home
+goes to the top of the page.
+
+2.2 Hero Section
+
+FR-03 — Hero content (Must) Statement: The hero must show a small
+uppercase label, a three-line main heading, and a two-sentence
+introduction. Acceptance criteria: - Label reads “Welcome to my little
+corner of the web”. - Heading reads “Hi, I’m Daniel. I’m learning to
+build for the web.” over three lines. - Intro text appears below the
+heading.
+
+FR-04 — Call-to-action button (Must) Statement: The hero must have a
+call-to-action button with an arrow. Acceptance criteria: - Button reads
+“See what I’m working on” followed by an arrow. - Clicking it scrolls to
+the Learning section.
+
+FR-05 — Code card (Must) Statement: The hero must display a code card
+that looks like a code editor window. Acceptance criteria: - Top bar has
+three dots (red, yellow, green) and the label “HTML & CSS”. - Body shows
+11 numbered lines of a basic HTML document in a monospace font.
+
+FR-06 — Selectable code text (Should) Statement: The code in the card
+must be real text, not an image. Acceptance criteria: - A visitor can
+select and copy the code. - Text stays sharp when zoomed in.
+
+2.3 About Section
+
+FR-07 — About content (Must) Statement: The About section must have a
+heading and a short paragraph on the left. Acceptance criteria: -
+Heading reads “A little about me”. - The paragraph appears beneath it.
+
+FR-08 — Current-goal card (Must) Statement: The About section must have
+a highlighted goal card on the right. Acceptance criteria: - Card has a
+target icon. - Label reads “My current goal”. - Title reads “Build a
+webpage from scratch.” - Includes a one-line description. - Uses a light
+green background with rounded corners.
+
+2.4 Learning Section
+
+FR-09 — Learning section introduction (Must) Statement: The section must
+have a heading and a one-line introduction. Acceptance criteria: -
+Heading reads “What I’m learning”. - Intro text appears below it.
+
+FR-10 — Three learning cards (Must) Statement: The section must show
+exactly three learning cards: HTML basics, CSS styling, and Page
+layouts. Acceptance criteria: - Each card has an icon, a title, a
+description, and a progress label. - On desktop the cards sit side by
+side with equal widths.
+
+FR-11 — Progress bars (Must) Statement: Each card must show progress as
+both text and a bar. Acceptance criteria: - Labels read 60%, 40%, and
+20% (subject to open item OI-03). - Each bar’s filled portion matches
+its percentage. - A gray track shows the remainder.
+
+2.5 Contact Strip and Footer
+
+FR-12 — Contact strip content (Must) Statement: The contact strip must
+have an icon, a heading, and a short message on the left. Acceptance
+criteria: - Heading reads “Let’s say hello.” - The message text appears
+beneath it.
+
+FR-13 — Email button (Must) Statement: The contact strip must have an
+outlined email button on the right. Acceptance criteria: - Button shows
+an envelope icon and the address danielchidiebere383@gmail.com. -
+Clicking it opens the visitor’s email app with that address filled in.
+
+FR-14 — Footer content (Must) Statement: The footer must show the
+copyright on the left and a short note on the right. Acceptance
+criteria: - Left reads “© 2026 Daniel Chidiebere. All rights
+reserved.” - Right reads “Built with passion · HTML & CSS”.
+
+3.  NON-FUNCTIONAL REQUIREMENTS
+
+How well the page must behave: quality, standards, and constraints.
+
+NFR-01 — Responsiveness (Must) - The page must work on desktop, tablet,
+and phone widths. - Test at 1280px, 768px, and 360px. - No horizontal
+scrolling at any width. - On small screens, the hero and About columns
+stack vertically and the three cards stack into one column.
+
+NFR-02 — Semantic HTML (Must) - Use meaningful HTML structure: header,
+nav, main, section, and footer elements. - Exactly one h1. - Headings
+must never skip levels.
+
+NFR-03 — Text contrast (Must) - Body text contrast against its
+background must be at least 4.5:1. - Check with a contrast tool.
+
+NFR-04 — Accessible icons (Should) - Decorative icons must be hidden
+from screen readers. - Link text must be descriptive on its own.
+
+NFR-05 — Keyboard accessibility (Should) - Keyboard users must be able
+to use the page. - Pressing Tab moves through all links and buttons in a
+logical order. - Each link and button has a visible focus outline.
+
+NFR-06 — Valid HTML (Must) - The HTML must be valid. - It must pass the
+W3C validator with zero errors.
+
+NFR-07 — Visual consistency (Should) - Use one accent color, one font
+family, consistent spacing, and consistent corner rounding. - Define
+colors and sizes once as CSS variables and reuse them rather than
+repeating raw values.
+
+NFR-08 — Maintainability (Must) - Organize and comment the project. -
+Separate index.html and css/style.css. - Group CSS by section, with
+comments explaining non-obvious rules.
+
+NFR-09 — Technology constraints (Must) - Use only HTML and CSS. - No
+JavaScript, frameworks, or CSS libraries.
+
+NFR-10 — Git workflow (Must) - Every change must be made on a branch,
+reference an issue, and be merged through a pull request. - Nothing is
+committed directly to main.
+
+NFR-11 — Deployment (Must) - The page must be publicly accessible. - It
+must be live on GitHub Pages at a working URL.
+
+4.  PLANNED GITHUB ISSUES
+
+Each group below becomes one GitHub Issue. The issue number is then
+referenced in commit messages and the pull request.
+
+1.  Project setup and structure Covers: NFR-08, NFR-09, NFR-10 Phase:
+    Design / Implementation
+
+2.  Header and navigation Covers: FR-01, FR-02 Phase: Implementation
+
+3.  Hero section Covers: FR-03, FR-04, FR-05, FR-06 Phase:
+    Implementation
+
+4.  About section Covers: FR-07, FR-08 Phase: Implementation
+
+5.  Learning section Covers: FR-09, FR-10, FR-11 Phase: Implementation
+
+6.  Contact strip and footer Covers: FR-12, FR-13, FR-14 Phase:
+    Implementation
+
+7.  Responsive layout Covers: NFR-01 Phase: Implementation / Testing
+
+8.  Accessibility and validation Covers: NFR-02 to NFR-06 Phase: Testing
+
+9.  Deploy to GitHub Pages Covers: NFR-11 Phase: Deployment
+
+10. OPEN ITEMS
+
+Decisions still needed from the author. Each must be closed before the
+related requirement is implemented.
+
+OI-01 — Site name, copyright year, and contact email Status: Closed
+Confirmed values: Daniel Chidiebere, 2026, danielchidiebere383@gmail.com
+
+OI-02 — Final wording of the About paragraph and the goal-card
+description (FR-07, FR-08) Status: Open
+
+OI-03 — Are the progress values 60%, 40%, and 20% the author’s real
+progress, or sample values from the design? (FR-11) Status: Open
+
+OI-04 — Wording of the hero intro text, which currently says “first
+personal homepage” (FR-03) Status: Open

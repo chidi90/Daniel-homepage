@@ -1,0 +1,113 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0 24px;
+}
+
+header h2{
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+ul{
+    display: flex;
+    gap: 25px;
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration-line: none;
+    color: black;
+}
+
+nav a:hover{
+    color: darkgreen;
+    font-weight: bold;
+    text-decoration-line:underline;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 5%;
+    background-color: #F0F7F4;
+}
+
+.introduction{
+    width: 50%;
+}
+
+.introduction h1{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#welcome{
+    color: green;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.code-card{
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid gray;
+    box-shadow: 3px 3px 8px grey; 
+    padding: 20px;
+}
+
+.button{
+    background-color: seagreen;
+    color: white;
+    padding:10px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    }
+
+.code-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circles{
+    display:flex;
+    gap: 5px;
+}
+
+.circles span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    }
+
+.circle-red{
+    background-color: red;
+}
+.circle-yellow{
+    background-color: yellow;
+}
+.circle-green{
+    background-color: green;
+}
+
+.code-content{
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+
+    
+
+
+    
